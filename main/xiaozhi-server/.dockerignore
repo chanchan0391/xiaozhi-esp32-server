@@ -1,5 +1,6 @@
 data/
-models/
+models/SenseVoiceSmall/
+models/sherpa-onnx*
 __pycache__/
 **/__pycache__/
 *.pyc
