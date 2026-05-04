@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.webpack_cache/
+.idea/
+.vscode/
+*.log
+.git/
+.gitignore
+README.md
+deploy.sh
+Dockerfile
+.dockerignore

@@ -1,0 +1,11 @@
+data/
+models/
+__pycache__/
+**/__pycache__/
+*.pyc
+.venv/
+.env
+*.log
+.git
+.idea
+.vscode
