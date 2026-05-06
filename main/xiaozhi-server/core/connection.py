@@ -543,7 +543,7 @@ class ConnectionHandler:
                 role="assistant",
                 tool_calls=[{
                     "id": tc_id,
-                    "function": {"arguments": '{"say_goodbye": "再见，下次再聊~"}', "name": "handle_exit_intent"},
+                    "function": {"arguments": '{"say_goodbye": "告辞，愿施主一路顺遂"}', "name": "handle_exit_intent"},
                     "type": "function", "index": 0,
                 }],
                 is_temporary=True,
@@ -553,7 +553,7 @@ class ConnectionHandler:
                 content="退出意图已处理", is_temporary=True,
             ))
             self.dialogue.put(Message(
-                role="assistant", content="再见，下次再聊~", is_temporary=True,
+                role="assistant", content="告辞，愿施主一路顺遂", is_temporary=True,
             ))
 
         if "play_music" in tool_names:
@@ -573,7 +573,7 @@ class ConnectionHandler:
                 content="正在为您播放音乐", is_temporary=True,
             ))
             self.dialogue.put(Message(
-                role="assistant", content="好嘞，给你安排上~", is_temporary=True,
+                role="assistant", content="妙也，且听这一曲", is_temporary=True,
             ))
 
         # 负向示例：用户请求普通对话内容时，直接回答，不调用任何工具
@@ -583,13 +583,13 @@ class ConnectionHandler:
         self.dialogue.put(Message(role="user", content="给我讲个故事吧", is_temporary=True))
         self.dialogue.put(Message(
             role="assistant",
-            content="好呀，你想听什么类型的呀？童话、冒险还是搞笑的？选一个我给你开讲~",
+            content="善哉，施主想听神鬼奇谭、市井趣话，还是修行公案？挑一个，老衲为你开讲。",
             is_temporary=True,
         ))
         self.dialogue.put(Message(role="user", content="你知道为什么天空是蓝色的吗", is_temporary=True))
         self.dialogue.put(Message(
             role="assistant",
-            content="天空看起来是蓝色，是因为阳光穿过大气层的时候，蓝色光波长短，被空气分子散射得最厉害，所以我们抬头一看就是满眼蓝色啦。",
+            content="天之所以呈蓝，乃日光穿越大气，蓝光波短，被空中微粒散得最广；故抬眼所见，皆成一片湛蓝。",
             is_temporary=True,
         ))
 
